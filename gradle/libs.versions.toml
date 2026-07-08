@@ -18,7 +18,7 @@ compose-bom = "2026.03.01"
 activityCompose = "1.13.0"
 
 # Plugins
-agp = "9.1.1"
+agp = "9.2.1"
 kotlin = "2.4.0"
 
 [libraries]
