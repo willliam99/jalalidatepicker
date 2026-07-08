@@ -63,9 +63,9 @@ afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "com.github.williamgates99"
+                groupId = "com.github.willliam99"
                 artifactId = "jalalidatepicker"
-                version = "1.0.6"
+                version = "1.0.7"
 
                 from(components["release"])
             }

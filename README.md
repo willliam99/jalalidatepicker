@@ -1,5 +1,5 @@
 # Jalali Date Picker
-![JitPack](https://img.shields.io/jitpack/version/com.github.williamgates99/jalalidatepicker)&nbsp;![GitHub](https://img.shields.io/github/license/WilliamGates99/JalaliDatePicker)&nbsp;![platform](https://img.shields.io/badge/platform-android-success)
+![JitPack](https://img.shields.io/jitpack/version/com.github.willliam99/jalalidatepicker)&nbsp;![GitHub](https://img.shields.io/github/license/willliam99/JalaliDatePicker)&nbsp;![platform](https://img.shields.io/badge/platform-android-success)
 
 **Jalali Date Picker** is a highly customizable and user-friendly date picker component designed for **Android Jetpack Compose**.<br>
 Tailored specifically for the Persian (Jalali) calendar, it empowers users to select dates effortlessly through an elegant, modern interface.<br>
@@ -38,7 +38,7 @@ repositories {
   
 ```kotlin
 dependencies {
-    implementation("com.github.williamgates99:jalalidatepicker:1.0.6")
+    implementation("com.github.willliam99:jalalidatepicker:1.0.7")
 }
 ```
 </details>
@@ -48,7 +48,7 @@ dependencies {
   
 ```groovy
 dependencies {
-    implementation 'com.github.williamgates99:jalalidatepicker:1.0.6'
+    implementation 'com.github.willliam99:jalalidatepicker:1.0.7'
 }
 ```
 </details>
@@ -78,7 +78,7 @@ JalaliDatePicker(
 
 ## Contribution
 We welcome any contributions from the community!<br>
-Found a bug or have a feature idea? Please open an [issue](https://github.com/WilliamGates99/JalaliDatePicker/issues) on our GitHub repository to let us know.<br>
+Found a bug or have a feature idea? Please open an [issue](https://github.com/willliam99/JalaliDatePicker/issues) on our GitHub repository to let us know.<br>
 Ready to contribute code? Simply fork the repository and submit a pull request.
 
 ## License
