@@ -63,7 +63,7 @@ afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "com.github.williamgates99"
+                groupId = "com.github.willliam99"
                 artifactId = "jalalidatepicker"
                 version = "1.0.7"
 
