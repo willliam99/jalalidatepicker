@@ -10,11 +10,11 @@ android-compileSdk = "37"
 android-buildToolsVersion = "37.0.0"
 
 desugar_jdk_libs = "2.1.5"
-coreKtx = "1.18.0"
+coreKtx = "1.19.0"
 appcompat = "1.7.1"
 kotlinxSerializationJson = "1.11.0"
-kotlinxDatetime = "0.7.1"
-compose-bom = "2026.03.01"
+kotlinxDatetime = "0.8.0"
+compose-bom = "2026.06.01"
 activityCompose = "1.13.0"
 
 # Plugins
