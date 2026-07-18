@@ -4,35 +4,45 @@
 **Jalali Date Picker** is a highly customizable and user-friendly date picker component designed for **Android Jetpack Compose**.<br>
 Tailored specifically for the Persian (Jalali) calendar, it empowers users to select dates effortlessly through an elegant, modern interface.<br>
 The library offers a seamless experience with fluid animations, intuitive controls, and a sleek design, making it an ideal choice for developers seeking to enhance their apps with a visually appealing and culturally relevant date selection tool.
-<p align="middle">
-  <img src="/resources/record_english.gif" width="33%"/>
+<p align="center">
+  <img src="/resources/record_english.gif" width="33%" alt="Jalali Date Picker - English Interface"/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="/resources/record_persian.gif" width="33%"/>
+  <img src="/resources/record_persian.gif" width="33%" alt="Jalali Date Picker - Persian Interface"/>
 </p>
 
 ## Installation
-### 1. Add the JitPack repository to your build file:
+### 1. Add the JitPack repository to your `settings.gradle.kts`:
 <details open>
 <summary><b>Kotlin DSL</b></summary>
-  
+
 ```kotlin
-repositories {
-    maven { url = uri("https://jitpack.io") }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
 }
 ```
 </details>
 
 <details>
 <summary><b>Groovy</b></summary>
-  
+
 ```groovy
-repositories {
-    maven { url 'https://jitpack.io' }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 </details>
 
-### 2. Add the dependency to your build.gradle.kts file:
+### 2. Add the dependency to your app module's `build.gradle.kts` file:
 <details open>
 <summary><b>Kotlin DSL</b></summary>
   
@@ -45,7 +55,7 @@ dependencies {
 
 <details>
 <summary><b>Groovy</b></summary>
-  
+
 ```groovy
 dependencies {
     implementation 'com.github.willliam99:jalalidatepicker:1.0.7'
