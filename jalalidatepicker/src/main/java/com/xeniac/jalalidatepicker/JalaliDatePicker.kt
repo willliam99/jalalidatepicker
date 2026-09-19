@@ -51,6 +51,14 @@ import kotlin.time.Instant
  *   Defaults to the current [LocalTextStyle] with a font size of 14.sp.
  * @param showMonthNumber If `true`, the month number will be displayed along with the month name.
  *   Defaults to `false`.
+ * @param showMonthNumber If `true`, the month number will be displayed along with the month name.
+ *   Defaults to `false`.
+ * @param showYearWheel If `true`, the month wheel will be displayed.
+ *   Defaults to `true`.
+ * @param showMonthWheel If `true`, the year wheel will be displayed.
+ *   Defaults to `true`.
+ * @param showDayWheel If `true`, the day wheel will be displayed.
+ *   Defaults to `true`.
  * @param onSelectedDateChange A callback that is invoked when the selected date changes.
  *   It provides the newly selected date as a [SelectedJalaliDate] object.
  *
@@ -73,6 +81,9 @@ fun JalaliDatePicker(
         fontSize = 14.sp
     ),
     showMonthNumber: Boolean = false,
+    showYearWheel: Boolean = true,
+    showMonthWheel: Boolean = true,
+    showDayWheel: Boolean = true,
     onSelectedDateChange: (selectedJalaliDate: SelectedJalaliDate) -> Unit
 ) {
     val context = LocalContext.current
@@ -116,68 +127,74 @@ fun JalaliDatePicker(
             .fillMaxWidth()
             .clip(RectangleShape)
     ) {
-        CalendarPartWheel(
-            selectedValue = selectedYear,
-            range = datePickerHandler.getSelectableYearsRange(),
-            dividersHeight = dividersHeight,
-            dividersColor = dividersColor,
-            textStyle = textStyle,
-            onSelectedValueChange = { newYear ->
-                selectedYear = newYear
-                onSelectedDateChange(
-                    SelectedJalaliDate(
-                        year = selectedYear,
-                        month = selectedMonth,
-                        day = selectedDay
+        if (showYearWheel) {
+            CalendarPartWheel(
+                selectedValue = selectedYear,
+                range = datePickerHandler.getSelectableYearsRange(),
+                dividersHeight = dividersHeight,
+                dividersColor = dividersColor,
+                textStyle = textStyle,
+                onSelectedValueChange = { newYear ->
+                    selectedYear = newYear
+                    onSelectedDateChange(
+                        SelectedJalaliDate(
+                            year = selectedYear,
+                            month = selectedMonth,
+                            day = selectedDay
+                        )
                     )
-                )
-            },
-            modifier = Modifier.weight(0.25f)
-        )
+                },
+                modifier = Modifier.weight(0.25f)
+            )
+        }
 
-        CalendarPartWheel(
-            selectedValue = selectedMonth,
-            range = datePickerHandler.getSelectableMonthsRange(selectedYear),
-            dividersHeight = dividersHeight,
-            dividersColor = dividersColor,
-            textStyle = textStyle,
-            onSelectedValueChange = { newMonth ->
-                selectedMonth = newMonth
-                onSelectedDateChange(
-                    SelectedJalaliDate(
-                        year = selectedYear,
-                        month = selectedMonth,
-                        day = selectedDay
+        if (showMonthWheel) {
+            CalendarPartWheel(
+                selectedValue = selectedMonth,
+                range = datePickerHandler.getSelectableMonthsRange(selectedYear),
+                dividersHeight = dividersHeight,
+                dividersColor = dividersColor,
+                textStyle = textStyle,
+                onSelectedValueChange = { newMonth ->
+                    selectedMonth = newMonth
+                    onSelectedDateChange(
+                        SelectedJalaliDate(
+                            year = selectedYear,
+                            month = selectedMonth,
+                            day = selectedDay
+                        )
                     )
-                )
-            },
-            label = { value ->
-                val monthName = datePickerHandler.getMonthName(value).asString(context)
-                if (showMonthNumber) {
-                    val monthNumber = value.toString()
-                    "$monthName / $monthNumber"
-                } else monthName
-            },
-            modifier = Modifier.weight(0.5f)
-        )
+                },
+                label = { value ->
+                    val monthName = datePickerHandler.getMonthName(value).asString(context)
+                    if (showMonthNumber) {
+                        val monthNumber = value.toString()
+                        "$monthName / $monthNumber"
+                    } else monthName
+                },
+                modifier = Modifier.weight(0.5f)
+            )
+        }
 
-        CalendarPartWheel(
-            selectedValue = selectedDay,
-            range = datePickerHandler.getSelectableDaysRange(selectedMonth, selectedYear),
-            dividersHeight = dividersHeight,
-            dividersColor = dividersColor,
-            textStyle = textStyle,
-            onSelectedValueChange = { newDay ->
-                selectedDay = newDay
-                onSelectedDateChange(
-                    SelectedJalaliDate(
-                        year = selectedYear,
-                        month = selectedMonth,
-                        day = selectedDay
+        if (showDayWheel) {
+            CalendarPartWheel(
+                selectedValue = selectedDay,
+                range = datePickerHandler.getSelectableDaysRange(selectedMonth, selectedYear),
+                dividersHeight = dividersHeight,
+                dividersColor = dividersColor,
+                textStyle = textStyle,
+                onSelectedValueChange = { newDay ->
+                    selectedDay = newDay
+                    onSelectedDateChange(
+                        SelectedJalaliDate(
+                            year = selectedYear,
+                            month = selectedMonth,
+                            day = selectedDay
+                        )
                     )
-                )
-            },
-            modifier = Modifier.weight(0.25f)
-        )
+                },
+                modifier = Modifier.weight(0.25f)
+            )
+        }
     }
 }
