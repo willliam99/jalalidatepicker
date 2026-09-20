@@ -84,6 +84,9 @@ JalaliDatePicker(
  * `dividersColor`: The color of the dividers.
  * `textStyle`: The text style to use for the date picker labels.
  * `showMonthNumber`: If `true`, the month number will be displayed along with the month name.
+ * `showYearWheel`: If `true`, the year wheel will be displayed.
+ * `showMonthWheel`: If `true`, the month wheel will be displayed.
+ * `showDayWheel`: If `true`, the day wheel will be displayed.
  * `onSelectedDateChange`: A callback that is invoked when the selected date changes.
 
 ## Contribution
