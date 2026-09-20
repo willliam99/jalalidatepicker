@@ -53,9 +53,9 @@ import kotlin.time.Instant
  *   Defaults to `false`.
  * @param showMonthNumber If `true`, the month number will be displayed along with the month name.
  *   Defaults to `false`.
- * @param showYearWheel If `true`, the month wheel will be displayed.
+ * @param showYearWheel If `true`, the year wheel will be displayed.
  *   Defaults to `true`.
- * @param showMonthWheel If `true`, the year wheel will be displayed.
+ * @param showMonthWheel If `true`, the month wheel will be displayed.
  *   Defaults to `true`.
  * @param showDayWheel If `true`, the day wheel will be displayed.
  *   Defaults to `true`.
