@@ -48,7 +48,7 @@ dependencyResolutionManagement {
   
 ```kotlin
 dependencies {
-    implementation("com.github.willliam99:jalalidatepicker:1.1.0")
+    implementation("com.github.willliam99:jalalidatepicker:1.1.1")
 }
 ```
 </details>
@@ -58,7 +58,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    implementation 'com.github.willliam99:jalalidatepicker:1.1.0'
+    implementation 'com.github.willliam99:jalalidatepicker:1.1.1'
 }
 ```
 </details>
